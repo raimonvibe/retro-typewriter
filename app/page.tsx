@@ -295,11 +295,9 @@ export default function RetroMonitor() {
       {/* Screen container */}
       <div className="p-6 bg-[#111] border-[6px] border-[#050505] rounded-md shadow-inner">
         <div className="bg-gray-800 rounded-lg p-6 shadow-[0_0_20px_8px_rgba(255,170,0,0.15)] border-4 border-gray-700">
-          <div className="bg-black rounded relative overflow-hidden p-6 min-h-[500px] flex flex-col">
+        <div className="bg-[#1f2d28] rounded relative overflow-hidden p-6 min-h-[500px] flex flex-col">
             {/* Scanline and CRT glow */}
             <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(transparent_50%,rgba(0,0,0,0.05)_50%)] bg-[length:100%_4px]" />
-            <div className="absolute inset-0 pointer-events-none opacity-15 bg-[radial-gradient(circle,rgba(255,170,0,0.5)_0%,rgba(0,0,0,0)_70%)]" />
-            <div className="absolute inset-0 pointer-events-none opacity-5 animate-pulse bg-[radial-gradient(circle,rgba(255,170,0,0.7)_0%,rgba(0,0,0,0)_60%)]" />
 
             {/* Question header */}
             <div className="text-amber-500/80 mb-4 font-mono text-sm">
