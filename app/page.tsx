@@ -278,7 +278,7 @@ export default function RetroMonitor() {
     <div className="flex items-center justify-center min-h-screen bg-gray-900 p-4">
       <div className="w-full max-w-3xl">
         <div className="bg-gray-800 rounded-lg p-6 shadow-[0_0_20px_8px_rgba(255,170,0,0.15)] border-4 border-gray-700">
-          <div className="bg-[#1f2d28] rounded relative overflow-hidden p-6 min-h-[500px] flex flex-col">
+          <div className="bg-black rounded relative overflow-hidden p-6 min-h-[500px] flex flex-col">
             {/* CRT effects */}
             <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(transparent_50%,rgba(0,0,0,0.02)_50%)] bg-[length:100%_4px]" />
             <div className="absolute inset-0 pointer-events-none opacity-10 bg-[radial-gradient(circle,rgba(10,255,10,0.8)_0%,rgba(0,0,0,0)_70%)]" />
