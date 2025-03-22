@@ -13,16 +13,16 @@
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
   }
-}
 
-body {
-  background-color: #111;
-  color: white;
-  font-family: monospace;
+  body {
+    @apply bg-[#111] text-white font-mono;
+  }
 }
 
 /* Typewriter text styling for all texts */
-.typewriter-text, .choice-text, .answer-text {
+.typewriter-text,
+.choice-text,
+.answer-text {
   background: var(--primary-gradient);
   -webkit-background-clip: text;
   background-clip: text;
@@ -44,21 +44,23 @@ body {
   50% { opacity: 0; }
 }
 
+/* Navigation buttons */
 .nav-button {
-  color: #ffd700;
-  border: 1px solid #b36200;
-  padding: 0.25rem 0.75rem;
-  border-radius: 0.25rem;
-  transition: background-color 0.2s;
+  @apply text-yellow-300 border border-orange-600 px-3 py-1 rounded transition-colors duration-200;
 }
 
 .nav-button:hover {
   background-color: rgba(227, 133, 0, 0.1);
 }
 
-/* CRT effect */
+/* CRT Scanline effect */
 .crt-scanline {
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.01) 50%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.01) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
   background-size: 100% 8px;
   position: absolute;
   top: 0;
@@ -68,3 +70,37 @@ body {
   pointer-events: none;
 }
 
+/* Responsive tweaks */
+@layer components {
+  .retro-container {
+    @apply max-w-3xl w-full mx-auto px-4 md:px-6 lg:px-8;
+  }
+
+  .retro-monitor {
+    @apply bg-gray-800 rounded-lg p-4 md:p-6 border-4 border-gray-700 shadow-[0_0_20px_8px_rgba(255,170,0,0.15)];
+  }
+
+  .retro-screen {
+    @apply relative bg-black rounded p-4 md:p-6 min-h-[400px] md:min-h-[500px] flex flex-col;
+  }
+
+  .choice-option {
+    @apply p-2 border border-yellow-800 rounded cursor-pointer hover:bg-yellow-900/20 transition-colors;
+  }
+
+  .text-content {
+    @apply font-mono text-lg md:text-xl mb-6 flex-grow;
+  }
+
+  .question-meta {
+    @apply text-yellow-500/80 mb-4 font-mono text-sm;
+  }
+
+  .choices-wrapper {
+    @apply space-y-3;
+  }
+
+  .nav-wrapper {
+    @apply flex flex-col md:flex-row justify-between mt-6 space-y-2 md:space-y-0 md:space-x-4;
+  }
+}
