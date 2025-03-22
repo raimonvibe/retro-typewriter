@@ -205,7 +205,158 @@ export default function RetroMonitor() {
         "Peace begins when we release our grip and accept what is.",
       ],
     },
+    {
+      question: "What role does failure play in your growth?",
+      choices: [
+        "A necessary step toward mastery",
+        "A mirror for self-reflection",
+        "A humbling experience",
+        "A redirection toward something better",
+      ],
+      responses: [
+        "Failure teaches more than success ever could — it's the forge of resilience and wisdom.",
+        "Every failure reflects back what we need to see. It reveals not weakness, but opportunity.",
+        "Being humbled reminds us that growth begins with humility and the courage to begin again.",
+        "What feels like failure may be a divine reroute. Sometimes doors close to lead us to better ones.",
+      ],
+    },
+    {
+      question: "How do you define wisdom?",
+      choices: [
+        "Knowing when to speak and when to listen",
+        "Learning from experience",
+        "Seeing the bigger picture",
+        "Choosing peace over being right",
+      ],
+      responses: [
+        "Wisdom is often silent. It speaks only when the heart is ready to hear.",
+        "Experience doesn't guarantee wisdom — reflection on that experience does.",
+        "True wisdom expands our view — it lets us hold multiple truths at once.",
+        "Letting go of the need to win can be the wisest decision of all.",
+      ],
+    },
+    {
+      question: "What does hope mean to you?",
+      choices: [
+        "A belief in better days",
+        "A light in the darkness",
+        "A choice to keep going",
+        "Trust in something unseen",
+      ],
+      responses: [
+        "Hope whispers: tomorrow may be brighter than today, and that is enough.",
+        "Even the smallest light can break the deepest dark. Hope is that light.",
+        "To hope is to resist despair — to walk, even when the path is unclear.",
+        "Hope lives in faith. It trusts what we cannot yet see or prove.",
+      ],
+    },
+    {
+      question: "How do you define a meaningful relationship?",
+      choices: [
+        "Mutual growth and support",
+        "Authentic communication",
+        "Shared values",
+        "Unconditional presence",
+      ],
+      responses: [
+        "We rise together when we grow together. A true relationship nurtures both souls.",
+        "Being heard and seen with honesty creates sacred space between people.",
+        "Values form the foundation — they align our steps even when the road shifts.",
+        "Sometimes, simply being there is the most profound form of love.",
+      ],
+    },
+    {
+      question: "What is your approach to change?",
+      choices: [
+        "I embrace it with curiosity",
+        "I fear it, but move anyway",
+        "I take time to adjust",
+        "I resist until I’m ready",
+      ],
+      responses: [
+        "Change is life’s invitation to evolve — curiosity makes it a friend, not a foe.",
+        "Fear doesn’t disqualify you from growth. It means you’re alive, and moving matters.",
+        "Not all change must be rushed. Graceful transitions are still powerful.",
+        "Resistance is not weakness — it's the soul asking for preparation.",
+      ],
+    },
+    {
+      question: "What does it mean to live authentically?",
+      choices: [
+        "Being true to your values",
+        "Speaking your truth kindly",
+        "Letting go of masks",
+        "Aligning your actions with your soul",
+      ],
+      responses: [
+        "Your values are your compass. Living by them brings alignment and peace.",
+        "Authenticity doesn't mean harshness — it means realness with respect.",
+        "Masks keep us safe, but also distant. Shedding them is an act of trust.",
+        "The deepest freedom is when your actions reflect who you truly are.",
+      ],
+    },
+    {
+      question: "Where do you find beauty?",
+      choices: [
+        "In nature’s rhythm",
+        "In human kindness",
+        "In art and creation",
+        "In everyday moments",
+      ],
+      responses: [
+        "The trees, the skies, the seasons — nature never rushes and never fails to awe.",
+        "Kindness is beauty in motion — a grace that transforms even ordinary moments.",
+        "Art reveals the soul — it allows beauty to be seen and shared.",
+        "A glance, a laugh, a quiet cup of tea — beauty lives in the little things.",
+      ],
+    },
+    {
+      question: "How do you stay grounded?",
+      choices: [
+        "Through spiritual practice",
+        "By connecting with loved ones",
+        "By spending time in nature",
+        "Through mindfulness and breath",
+      ],
+      responses: [
+        "Faith and ritual create roots in a chaotic world — anchors for the soul.",
+        "Connection reminds us of who we are beyond roles and worries.",
+        "Nature brings us back to what truly matters: simplicity and presence.",
+        "The breath is a portal. Inhale, exhale — here you are.",
+      ],
+    },
+    {
+      question: "What does courage look like to you?",
+      choices: [
+        "Doing what’s right despite fear",
+        "Being vulnerable",
+        "Speaking up for others",
+        "Choosing the unknown",
+      ],
+      responses: [
+        "Courage isn't the absence of fear — it’s moving forward in spite of it.",
+        "To be vulnerable is to be seen. That is no small thing.",
+        "Advocacy is a sacred act — a voice raised for justice echoes far.",
+        "The unknown is the birthplace of all new things. Courage lives there.",
+      ],
+    },
+    {
+      question: "How do you reconnect with yourself?",
+      choices: [
+        "Journaling and reflection",
+        "Silence and solitude",
+        "Creative expression",
+        "Spiritual or meditative practice",
+      ],
+      responses: [
+        "Writing gives form to the formless — it helps you hear your own soul.",
+        "Solitude isn’t loneliness — it’s space to come home to yourself.",
+        "In creativity, we meet ourselves anew — color, sound, and movement speak truth.",
+        "Prayer and stillness allow your spirit to rise above the noise of the world.",
+      ],
+    },
   ];
+
 
   // Cleanup on unmount
   useEffect(() => {
