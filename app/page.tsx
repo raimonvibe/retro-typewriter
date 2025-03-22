@@ -275,36 +275,20 @@ export default function RetroMonitor() {
   }
 
   return (
-  <div className="bg-[#1a1a1a] min-h-screen flex items-center justify-center p-6">
-    <div className="bg-[#333] border-[20px] border-[#222] rounded-[1rem] shadow-[inset_0_0_20px_#000] relative w-full max-w-5xl overflow-hidden">
-
-      {/* Power LED */}
-      <div className="absolute bottom-4 left-6 w-3 h-3 bg-green-500 rounded-full shadow-[0_0_8px_2px_rgba(0,255,0,0.6)]" />
-
-      {/* Ventilation slits */}
-      <div className="absolute right-4 top-1/2 -translate-y-1/2 space-y-1">
-        {Array.from({ length: 10 }).map((_, i) => (
-          <div key={i} className="w-6 h-1 bg-[#444] rounded-sm" />
-        ))}
-      </div>
-
-      {/* Top panel strip */}
-      <div className="absolute top-4 left-1/2 -translate-x-1/2 w-24 h-2 rounded-full bg-[#555]" />
-      <div className="absolute top-6 left-1/2 -translate-x-1/2 w-36 h-4 rounded-full bg-gradient-to-r from-[#111] via-[#444] to-[#111]" />
-
-      {/* Screen container */}
-      <div className="p-6 bg-[#111] border-[6px] border-[#050505] rounded-md shadow-inner">
+    <div className="flex items-center justify-center min-h-screen bg-gray-900 p-4">
+      <div className="w-full max-w-3xl">
         <div className="bg-gray-800 rounded-lg p-6 shadow-[0_0_20px_8px_rgba(255,170,0,0.15)] border-4 border-gray-700">
-        <div className="bg-[#1f2d28] rounded relative overflow-hidden p-6 min-h-[500px] flex flex-col">
-            {/* Scanline and CRT glow */}
-            <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(transparent_50%,rgba(0,0,0,0.05)_50%)] bg-[length:100%_4px]" />
+          <div className="bg-black rounded relative overflow-hidden p-6 min-h-[500px] flex flex-col">
+            {/* CRT effects */}
+            <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(transparent_50%,rgba(0,0,0,0.02)_50%)] bg-[length:100%_4px]" />
+            <div className="absolute inset-0 pointer-events-none opacity-10 bg-[radial-gradient(circle,rgba(10,255,10,0.8)_0%,rgba(0,0,0,0)_70%)]" />
 
-            {/* Question header */}
+            {/* Question number */}
             <div className="text-amber-500/80 mb-4 font-mono text-sm">
               Question {currentQuestionIndex + 1}/{questions.length}
             </div>
 
-            {/* Typing area */}
+            {/* Text display area */}
             <div className="font-mono text-xl mb-6 flex-grow">
               <p className="typewriter-text text-amber-300/90">
                 {typedText}
@@ -329,21 +313,26 @@ export default function RetroMonitor() {
               </div>
             )}
 
-            {/* Navigation buttons */}
+            {/* Navigation */}
             <div className="flex justify-between mt-6 font-mono">
               <button
-                onClick={() =>
-                  setCurrentQuestionIndex((prev) => (prev - 1 + questions.length) % questions.length)
-                }
+                onClick={() => setCurrentQuestionIndex((prev) => (prev - 1 + questions.length) % questions.length)}
                 className="nav-button flex items-center text-amber-300/90 border border-amber-700/70 px-3 py-1 rounded hover:bg-amber-900/20 transition-colors"
               >
                 <ChevronLeft className="w-4 h-4 mr-1 text-amber-500" /> Prev
               </button>
 
+              {!isTypingQuestion && typingComplete && (
+                <button
+                  onClick={handleBackToQuestion}
+                  className="nav-button text-amber-300/90 border border-amber-700/70 px-3 py-1 rounded hover:bg-amber-900/20 transition-colors"
+                >
+                  Back to Question
+                </button>
+              )}
+
               <button
-                onClick={() =>
-                  setCurrentQuestionIndex((prev) => (prev + 1) % questions.length)
-                }
+                onClick={() => setCurrentQuestionIndex((prev) => (prev + 1) % questions.length)}
                 className="nav-button flex items-center text-amber-300/90 border border-amber-700/70 px-3 py-1 rounded hover:bg-amber-900/20 transition-colors"
               >
                 Next <ChevronRight className="w-4 h-4 ml-1 text-amber-500" />
@@ -353,8 +342,7 @@ export default function RetroMonitor() {
         </div>
       </div>
     </div>
-  </div>
-)
+  )
 
 }
 
